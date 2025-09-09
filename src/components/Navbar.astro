@@ -1,72 +1,44 @@
 <nav
-  class="fixed w-full top-0 left-0 z-50
-         bg-black/30 backdrop-blur-lg
-         border-b border-cyan-400/30
-         shadow-[0_0_15px_rgba(0,255,255,0.4)]
-         p-4 flex justify-between items-center
-         transition-all duration-500"
+  class="fixed w-full top-0 left-0 z-50 bg-black/30 backdrop-blur-lg 
+         border-b border-cyan-400/30 shadow-[0_0_15px_rgba(0,255,255,0.4)] 
+         px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex justify-between items-center"
 >
-  <a href="#inicio">
-    <h1
-      class="text-2xl font-bold text-cyan-400 d
-      rop-shadow-[0_0_10px_rgba(0,255,255,0.8)]"
-    >
+  <!-- Logo -->
+  <a href="#inicio" class="shrink-0">
+    <h1 class="text-xl sm:text-2xl font-bold text-blue-600 
+               drop-shadow-[0_0_10px_rgba(0,255,255,0.8)]">
       JL
     </h1>
   </a>
 
-  <ul class="flex space-x-6 text-lg">
-    <li>
-      <a href="#inicio" class="relative group transition">
-        <span class="text-white group-hover:text-cyan-300 transition">
-          Inicio
-        </span>
-        <span
-          class="absolute left-0 -bottom-1 w-0 
-          h-[2px] bg-gradient-to-r from-cyan-400 to-blue-500 
-          transition-all duration-300 group-hover:w-full 
-          group-hover:shadow-[0_0_10px_rgba(0,255,255,0.8)]"
-        ></span>
-      </a>
-    </li>
-    <li>
-      <a href="#sobre-mi" class="relative group transition">
-        <span class="text-white group-hover:text-cyan-300 transition">
-          Sobre mí
-        </span>
-        <span
-          class="absolute left-0 -bottom-1 w-0 h-[2px]
-           bg-gradient-to-r from-cyan-400 to-blue-500 
-           transition-all duration-300 group-hover:w-full 
-           group-hover:shadow-[0_0_10px_rgba(0,255,255,0.8)]"
-        ></span>
-      </a>
-    </li>
-    <li>
-      <a href="#proyectos" class="relative group transition">
-        <span class="text-white group-hover:text-cyan-300 transition">
-          Proyectos
-        </span>
-        <span
-          class="absolute left-0 -bottom-1 w-0 h-[2px] 
-          bg-gradient-to-r from-cyan-400 to-blue-500 
-          ransition-all duration-300 group-hover:w-full 
-          group-hover:shadow-[0_0_10px_rgba(0,255,255,0.8)]"
-        ></span>
-      </a>
-    </li>
-    <li>
-      <a href="#contacto" class="relative group transition">
-        <span class="text-white group-hover:text-cyan-300 transition">
-          Contacto
-        </span>
-        <span
-          class="absolute left-0 -bottom-1 w-0 h-[2px] 
-          bg-gradient-to-r from-cyan-400 to-blue-500 
-          transition-all duration-300 group-hover:w-full 
-          group-hover:shadow-[0_0_10px_rgba(0,255,255,0.8)]"
-        ></span>
-      </a>
-    </li>
+  <!-- Menú Desktop -->
+  <ul class="hidden md:flex gap-8 text-base lg:text-lg font-medium">
+    <li><a href="#inicio" class="text-white hover:text-blue-600">Inicio</a></li>
+    <li><a href="#sobre-mi" class="text-white hover:text-blue-600">Sobre mí</a></li>
+    <li><a href="#proyectos" class="text-white hover:text-blue-600">Proyectos</a></li>
+    <li><a href="#contacto" class="text-white hover:text-blue-600">Contacto</a></li>
   </ul>
+
+  <!-- Botón hamburguesa -->
+  <button id="menu-btn" aria-controls="mobile-menu" aria-expanded="false"
+          class="md:hidden flex flex-col justify-between w-8 h-8 
+                 focus:outline-none group transition-transform duration-300">
+    <span class="block h-1 w-full bg-blue-600 rounded transition-all duration-300"></span>
+    <span class="block h-1 w-full bg-blue-600 rounded transition-all duration-300"></span>
+    <span class="block h-1 w-full bg-blue-600 rounded transition-all duration-300"></span>
+  </button>
 </nav>
+
+<!-- Menú Mobile -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 top-16 md:hidden z-40 bg-black/90 backdrop-blur-lg 
+         flex flex-col items-center justify-center gap-6 text-lg font-medium 
+         transform origin-top transition-all duration-300 
+         scale-y-0 opacity-0 pointer-events-none"
+>
+  <a href="#inicio" class="text-white hover:text-cyan-300">Inicio</a>
+  <a href="#sobre-mi" class="text-white hover:text-cyan-300">Sobre mí</a>
+  <a href="#proyectos" class="text-white hover:text-cyan-300">Proyectos</a>
+  <a href="#contacto" class="text-white hover:text-cyan-300">Contacto</a>
+</div>

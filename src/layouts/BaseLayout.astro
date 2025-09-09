@@ -11,7 +11,7 @@ const { title } = Astro.props;
   </head>
 
   <body class="min-h-screen w-full relative text-white font-sans overflow-x-hidden bg-black">
-    <!-- Northern Aurora Background -->
+    <!-- Fondo -->
     <div
       class="fixed inset-0 -z-10"
       style="
@@ -26,5 +26,8 @@ const { title } = Astro.props;
 
     <!-- Aquí va tu contenido -->
     <slot />
+
+    <!-- Script hamburguesa -->
+    <script src="/menu.js" defer></script>
   </body>
 </html>
